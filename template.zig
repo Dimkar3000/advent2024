@@ -1,15 +1,18 @@
 const print = @import("std").debug.print;
 
-fn part1() void {
+fn part1(filename: []const u8) !void {
     print("  part1:\n", .{});
+    print("  filename: {s}\n", .{filename});
 }
 
-fn part2() void {
+fn part2(filename: []const u8) !void {
     print("  part2:\n", .{});
+    print("  filename: {s}\n", .{filename});
 }
 
-pub fn main() void {
+pub fn main() !void {
     print("Problem 1:\n", .{});
-    part1();
-    part2();
+    const filename = "test.txt";
+    try part1(filename);
+    try part2(filename);
 }
