@@ -1,4 +1,7 @@
 const print = @import("std").debug.print;
+const std = @import("std");
+const ArrayList = std.ArrayList;
+const allocator = @import("std").heap.page_allocator;
 
 fn part1(filename: []const u8) !void {
     print("  part1:\n", .{});
